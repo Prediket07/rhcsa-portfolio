@@ -11,9 +11,8 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 
 ## Labs
 
-| Lab | Topic | Status |
-|------|--------|--------|
-| Lab 01 | User & Group Management | Complete |
+| Lab 01 | labs/lab01-user-group-management/README.md | Complete |
+
 
 ## Skills Demonstrated
 
@@ -27,3 +26,4 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 ## Goal
 
 Document RHCSA-aligned labs with commands, explanations, screenshots, troubleshooting notes, and lessons learned.
+
