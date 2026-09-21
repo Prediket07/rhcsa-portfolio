@@ -282,23 +282,23 @@ ls -ld
 
 ### Initial Setup
 
-Lab03%20-%20special%20permissions/01.jpg
+Lab03-specialpermissions/01.jpg
 
 ### SUID Example
 
-Lab03%20-%20special%20permissions/02.jpg
+Lab03-specialpermissions/02.jpg
 
 ### SGID Example
 
-Lab03%20-%20special%20permissions/03.jpg
+Lab03-specialpermissions/03.jpg
 
 ### Sticky Bit Example
 
-Lab03%20-%20special%20permissions/04.jpg
+Lab03-specialpermissions/04.jpg
 
 ### Final Verification
 
-Lab03%20-%20special%20permissions/05.jpg
+Lab03-specialpermissions/05.jpg
 ### Final Verification
 
-Lab03%20-%20special%20permissions/05.jpg
+Lab03-specialpermissions/05.jpg
