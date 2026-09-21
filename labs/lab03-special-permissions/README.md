@@ -299,3 +299,6 @@ Lab03%20-%20special%20permissions/04.jpg
 ### Final Verification
 
 Lab03%20-%20special%20permissions/05.jpg
+### Final Verification
+
+Lab03%20-%20special%20permissions/05.jpg
