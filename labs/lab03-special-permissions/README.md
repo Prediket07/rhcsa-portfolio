@@ -282,7 +282,7 @@ ls -ld
 
 ### Initial Setup
 
-![SUID demonstration](Labs03%20-%20special%20permissions/01.jpg)
+![SUID demonstration](Lab03%20-%20special%20permissions/01.jpg)
 
 ### SUID Example
 
