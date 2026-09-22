@@ -284,3 +284,23 @@ Specific User Permissions
 ```
 
 without modifying ownership or group membership.
+
+## Screenshots
+
+### Initial ACL State
+
+01-acl-initial-state.jpg
+
+Verified the default ACL entries on project.txt.
+
+### ACL Added for labuser
+
+02-acl-user-added.jpg
+
+Granted rwx permissions to labuser using setfacl.
+
+### ACL Removal Verification
+
+03-acl-removal.jpg
+
+Removed ACL entries and verified the ACL returned to its default state.
