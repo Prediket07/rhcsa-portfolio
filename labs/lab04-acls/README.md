@@ -294,7 +294,7 @@ Verified the default ACL entries on project.txt.
 
 ### ACL Added for labuser
 
-![ACL added for labuser](Lab04%20-%ACLs/acl-user-added.jpg)
+![ACL added for labuser](Lab04%20-%20ACLs/acl-user-added.jpg)
 
 Granted rwx permissions to labuser using setfacl.
 
