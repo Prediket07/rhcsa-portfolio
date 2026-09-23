@@ -17,6 +17,8 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 | Lab 02 | [File Permissions](labs/lab02-file-permissions/README.md) | Complete |
 | Lab 03 | [Special Permissions](labs/lab03-special-permissions/README.md) | Complete |
 | Lab 04 | [Access Control Lists (ACLs)](labs/lab04-acls/README.md) | Complete |
+| Lab 05 | [Systemd Services](labs/lab05-systemd-services/README.md) | Complete |
+
 ## Skills Demonstrated
 
 - Linux user administration
