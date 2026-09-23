@@ -185,6 +185,8 @@ The service remained running but would not start automatically after reboot.
 
 ## Enable a Service
 
+![sshd enabled](Lab05%20-%20systemd%20Services/08-sshd-enabled.jpg)
+
 ```bash
 sudo systemctl enable sshd
 ```
