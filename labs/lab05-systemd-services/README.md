@@ -244,6 +244,9 @@ Stopped sshd.service
 
 ## View Firewall Logs
 
+![sshd firewalld logs](Lab05%20-%20systemd%20Services/07-journalctl-u-sshd-and-f-firewalld.jpg)
+
+
 ```bash
 journalctl -u firewalld
 ```
