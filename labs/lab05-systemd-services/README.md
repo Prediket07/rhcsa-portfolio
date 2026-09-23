@@ -65,7 +65,7 @@ The SSH daemon was installed, running, and configured to start automatically.
 
 ## Stop a Service
 
-![sshd stop](Lab05%20-%20systemd%20Services/0-sshd-stop.jpg)
+![sshd stop](Lab05%20-%20systemd%20Services/02-sshd-stop.jpg)
 
 ```bash
 sudo systemctl stop sshd
