@@ -43,6 +43,8 @@ These are different states.
 
 ## Check Service Status
 
+![sshd status](Lab05%20-%20systemd%20Services/01-sshd-status.jpg)
+
 ```bash
 systemctl status sshd
 ```
@@ -62,6 +64,8 @@ The SSH daemon was installed, running, and configured to start automatically.
 ---
 
 ## Stop a Service
+
+![sshd stop](Lab05%20-%20systemd%20Services/0-sshd-stop.jpg)
 
 ```bash
 sudo systemctl stop sshd
@@ -87,6 +91,8 @@ The service stopped immediately.
 
 ## Start a Service
 
+![sshd start](Lab05%20-%20systemd%20Services/03-sshd-start.jpg)
+
 ```bash
 sudo systemctl start sshd
 ```
@@ -111,6 +117,8 @@ The service was returned to an active state.
 
 ## Restart a Service
 
+
+
 ```bash
 sudo systemctl restart sshd
 ```
@@ -128,6 +136,8 @@ After configuration changes
 ---
 
 ## Check Startup State
+
+![sshd is-enabled](Lab05%20-%20systemd%20Services/04-sshd-is-enabled.jpg)
 
 ```bash
 systemctl is-enabled sshd
@@ -148,6 +158,8 @@ The service will start automatically at boot.
 ---
 
 ## Disable a Service
+
+![sshd disabled](Lab05%20-%20systemd%20Services/05-sshd-disabled.jpg)
 
 ```bash
 sudo systemctl disable sshd
@@ -208,6 +220,8 @@ Displays all system logs.
 ---
 
 ## View Service Logs
+
+![sshd journalctl](Lab05%20-%20systemd%20Services/06-sshd-journalctl.jpg)
 
 ```bash
 journalctl -u sshd
