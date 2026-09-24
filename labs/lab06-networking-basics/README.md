@@ -238,7 +238,9 @@ Without DNS, systems would require direct IP addresses instead of hostnames.
 
 ### Hostname and Interface Information
 
-Screenshot: `01-hostname-and-ip-addr.jpg`
+![Hostname and IP address](Lab06%20-%20Networking%20Basics/01-hostname-and-ip-addr.jpg)
+
+Screenshot: 01-hostname-and-ip-addr
 
 Demonstrated:
 
@@ -251,7 +253,9 @@ Demonstrated:
 
 ### Routing and Connectivity
 
-Screenshot: `02-ip-route-and-ping.jpg`
+![ip route and ping](Lab06%20-%20Networking%20Basics/02-ip-route-and-ping.jpg)
+
+Screenshot: 02-ip-route-and-ping
 
 Demonstrated:
 
@@ -262,6 +266,8 @@ Demonstrated:
 ---
 
 ### DNS Configuration
+
+![resolv.conf](Lab06%20-%20Networking%20Basics/03-resolv-conf.jpg)
 
 Screenshot: `03-resolv-conf.jpg`
 
