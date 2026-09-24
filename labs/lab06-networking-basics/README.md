@@ -267,7 +267,7 @@ Demonstrated:
 
 ### DNS Configuration
 
-![resolv.conf](Lab06%20-%20Networking%20Basics/03-resolv-conf.jpg)
+![DNS Configuration](Lab06%20-%20Networking%20Basics/03-resolv-conf.jpg)
 
 Screenshot: `03-resolv-conf.jpg`
 
