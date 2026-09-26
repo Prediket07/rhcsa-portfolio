@@ -50,7 +50,29 @@ Verification
 
 ---
 
+## Add New Disk in VMware
+
+Before Linux can see a new disk, it has to exist at the hypervisor level first.
+
+Open VM settings:
+
+```text
+VM > Settings > Hardware > Add... > Hard Disk
+```
+
+A new 10 GB virtual NVMe disk was added to the VM (shown here as "Hard Disk 3 (NVMe)").
+
+![Add Disk in VMware](Lab07%20-%20storage%20management/02-add-disk-vmware.jpg)
+
+Observation:
+
+The disk exists in VMware but is not yet visible to the guest OS until the VM is powered on and `lsblk` is run.
+
+---
+
 ## Detect New Disk
+
+![Detect New Disk](Lab07%20-%20storage%20management/01-detect-new-disk.jpg)
 
 A new 10 GB virtual disk was added to the VM.
 
@@ -73,6 +95,8 @@ The new disk contained no partitions or filesystems.
 ---
 
 ## Create Partition
+
+![Create Partition with fdisk](Lab07%20-%20storage%20management/03-create-partition-fdisk.jpg)
 
 Launch fdisk:
 
@@ -112,6 +136,8 @@ A new partition was created using the entire disk.
 
 ## Create Filesystem
 
+![Create XFS Filesystem](Lab07%20-%20storage%20management/04-create-xfs-filesystem.jpg)
+
 Create an XFS filesystem:
 
 ```bash
@@ -124,7 +150,9 @@ The partition was formatted and prepared for use.
 
 ---
 
-## Verify Filesystem
+## Verify Filesystem, Create Mount Point, and Mount
+
+Verify the filesystem was created correctly:
 
 ```bash
 sudo blkid /dev/nvme0n3p1
@@ -135,14 +163,6 @@ Result:
 ```text
 TYPE="xfs"
 ```
-
-Observation:
-
-The filesystem was successfully created.
-
----
-
-## Create Mount Point
 
 Create a directory to mount the new filesystem:
 
@@ -155,14 +175,6 @@ Verify:
 ```bash
 ls -ld /lab07data
 ```
-
-Observation:
-
-The mount point was created successfully.
-
----
-
-## Mount Filesystem
 
 Mount the filesystem:
 
@@ -188,9 +200,11 @@ mounted on:
 /lab07data
 ```
 
+![Verify, Mkdir, and Mount](Lab07%20-%20storage%20management/05-verify-mkdir-mount.jpg)
+
 Observation:
 
-The storage became available to the operating system.
+The filesystem was confirmed as XFS, a mount point was created successfully, and the storage became available to the operating system.
 
 ---
 
@@ -242,13 +256,30 @@ df -h
 
 Mount disappeared.
 
-Reload configuration:
+![Fstab Entry and Unmount](Lab07%20-%20storage%20management/06-fstab-entry-and-unmount.jpg)
+
+Test the fstab entry:
+
+```bash
+sudo mount -a
+```
+
+Result:
+
+```text
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use 'systemctl daemon-reload' to reload.
+```
+
+![Mount -a Failed - Troubleshooting](Lab07%20-%20storage%20management/07-mount-a-failed-troubleshoot.jpg)
+
+Reload systemd to pick up the fstab change:
 
 ```bash
 sudo systemctl daemon-reload
 ```
 
-Test:
+Test again:
 
 ```bash
 sudo mount -a
@@ -272,9 +303,11 @@ mounted on:
 /lab07data
 ```
 
+![Mount -a Success](Lab07%20-%20storage%20management/08-mount-a-success.jpg)
+
 Observation:
 
-The fstab entry works correctly.
+The fstab entry initially failed because systemd caches the fstab file in memory and doesn't automatically notice edits. Running `daemon-reload` forces systemd to re-read the file, after which `mount -a` succeeded.
 
 ---
 
@@ -285,6 +318,8 @@ Reboot system:
 ```bash
 sudo reboot
 ```
+
+![Reboot Command Issued](Lab07%20-%20storage%20management/09-reboot-command-issued.jpg)
 
 After reboot:
 
@@ -310,6 +345,8 @@ automatically mounted on:
 /lab07data
 ```
 
+![Post-Reboot Verification](Lab07%20-%20storage%20management/10-post-reboot-verification.jpg)
+
 Observation:
 
 Persistent mounting worked successfully.
@@ -323,74 +360,24 @@ Persistent mounting worked successfully.
 - A mount point provides a location where storage becomes accessible.
 - UUIDs should be used in `/etc/fstab` for reliable mounting.
 - `mount -a` is an excellent way to test fstab entries before rebooting.
+- systemd caches `/etc/fstab` in memory, so edits require `systemctl daemon-reload` before `mount -a` will pick them up.
 - A successful reboot confirms proper storage configuration.
 
 ---
 
 ## Verification Checklist
 
+- [x] Added new disk in VMware
 - [x] Detected new disk
 - [x] Created partition
 - [x] Created XFS filesystem
+- [x] Verified filesystem
 - [x] Created mount point
 - [x] Mounted storage
-- [x] Verified filesystem
 - [x] Added fstab entry
-- [x] Tested with mount -a
+- [x] Tested with mount -a (troubleshot initial failure)
 - [x] Rebooted system
 - [x] Verified persistent mount after reboot
-
----
-
-## Screenshots
-
-### Detect New Disk
-
-`01-detect-new-disk.jpg`
-
-### Create Partition with fdisk
-
-`02-create-partition-fdisk.jpg`
-
-### Partition Created
-
-`03-partition-created.jpg`
-
-### Create XFS Filesystem
-
-`04-create-xfs-filesystem.jpg`
-
-### Verify Filesystem with blkid
-
-`05-verify-filesystem-blkid.jpg`
-
-### Create Mount Point
-
-`06-create-mount-point.jpg`
-
-### Mount Filesystem
-
-`07-mount-filesystem.jpg`
-
-### Add fstab Entry
-
-`08-add-fstab-entry.jpg`
-
-### Unmount Filesystem
-
-`09-unmount-filesystem.jpg`
-
-### Test with mount -a
-
-`10-mount-a-test.jpg`
-
-### Reboot System
-
-`11-reboot-system.jpg`
-
-### Post-Reboot Verification
-
-`12-post-reboot-verification.jpg`
 
 ---
 
