@@ -19,6 +19,7 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 | Lab 04 | [Access Control Lists (ACLs)](labs/lab04-acls/README.md) | Complete |
 | Lab 05 | [Systemd Services](labs/lab05-systemd-services/README.md) | Complete |
 | Lab 06 | [Networking Basics](labs/lab06-networking-basics/README.md) | Complete |
+| Lab 07 | [Storage Management](labs/lab07-storage-management/README.md) | Complete |
 
 ## Skills Demonstrated
 
