@@ -71,7 +71,7 @@ The filesystem was mounted and configured in:
 
 for automatic mounting.
 
-![Initial State](Lab08%20-%20storage%20decommissioning/01-initial-state.jpg)
+![Initial State](01-initial-state.jpg)
 
 ---
 
@@ -97,7 +97,7 @@ Observation:
 
 no longer appeared in mounted filesystems.
 
-![Unmount Filesystem](Lab08%20-%20storage%20decommissioning/02-unmount-filesystem.jpg)
+![Unmount Filesystem](02-unmount-filesystem.jpg)
 
 Key lesson:
 
@@ -135,7 +135,7 @@ Verify:
 cat /etc/fstab
 ```
 
-![Remove Fstab Entry](Lab08%20-%20storage%20decommissioning/03-remove-fstab-entry.jpg)
+![Remove Fstab Entry](03-remove-fstab-entry.jpg)
 
 Observation:
 
@@ -157,7 +157,7 @@ Verify:
 df -h
 ```
 
-![Validate Configuration with mount -a](Lab08%20-%20storage%20decommissioning/04-validate-mount-a.jpg)
+![Validate Configuration with mount -a](04-validate-mount-a.jpg)
 
 Observation:
 
@@ -175,7 +175,7 @@ Command:
 sudo blkid /dev/nvme0n3p1
 ```
 
-![Verify Filesystem Still Exists](Lab08%20-%20storage%20decommissioning/05-verify-filesystem-exists.jpg)
+![Verify Filesystem Still Exists](05-verify-filesystem-exists.jpg)
 
 Observation:
 
@@ -263,7 +263,7 @@ Result:
 No such file or directory
 ```
 
-![Delete Partition and Remove Mount Point](Lab08%20-%20storage%20decommissioning/06-delete-partition-remove-mountpoint.jpg)
+![Delete Partition and Remove Mount Point](06-delete-partition-remove-mountpoint.jpg)
 
 Observation:
 
@@ -305,7 +305,7 @@ nvme0n3
 
 no longer existed.
 
-![Remove Virtual Disk](Lab08%20-%20storage%20decommissioning/07-remove-virtual-disk.jpg)
+![Remove Virtual Disk](07-remove-virtual-disk.jpg)
 
 Observation:
 
