@@ -84,7 +84,7 @@ Active: active (running)
 Enabled: enabled
 ```
 
-![Verify Cron Service and Existing Jobs](01-verify-service-and-jobs.jpg)
+![Verify Cron Service and Existing Jobs](Lab10%20-%20Scheduled%20Tasks%20%28cron%29/01-verify-service-and-jobs.jpg)
 
 The scheduler was installed and running, and no scheduled jobs existed yet.
 
@@ -141,7 +141,7 @@ Cron Test Sun Sep 27 07:08:01 PM CDT 2026
 Cron Test Sun Sep 27 07:09:01 PM CDT 2026
 ```
 
-![Create and Verify Cron Job](02-create-and-verify-cron.jpg)
+![Create and Verify Cron Job](Lab10%20-%20Scheduled%20Tasks%20%28cron%29/02-create-and-verify-cron.jpg)
 
 Observation:
 
@@ -181,7 +181,7 @@ New entry:
 */2 * * * * echo "Cron Test $(date)" >> /tmp/cron-test.log
 ```
 
-![Modify Schedule](03-modify-schedule.jpg)
+![Modify Schedule](Lab10%20-%20Scheduled%20Tasks%20%28cron%29/03-modify-schedule.jpg)
 
 Observation:
 
@@ -216,7 +216,7 @@ Observed timestamps:
 07:52
 ```
 
-![Verify Updated Schedule](04-verify-updated-schedule.jpg)
+![Verify Updated Schedule](Lab10%20-%20Scheduled%20Tasks%20%28cron%29/04-verify-updated-schedule.jpg)
 
 Observation:
 
@@ -234,11 +234,11 @@ crontab -e
 
 Delete the cron entry.
 
-![Cron Entry Before Removal](05-remove-cron-entry.jpg)
+![Cron Entry Before Removal](Lab10%20-%20Scheduled%20Tasks%20%28cron%29/05-remove-cron-entry.jpg)
 
 Save and exit with `:wq`.
 
-![Delete Entry and Save](06-save-and-exit.jpg)
+![Delete Entry and Save](Lab10%20-%20Scheduled%20Tasks%20%28cron%29/06-save-and-exit.jpg)
 
 Verify:
 
@@ -252,7 +252,7 @@ Result:
 (no output — crontab is empty)
 ```
 
-![Verify Cleanup](07-verify-cleanup.jpg)
+![Verify Cleanup](Lab10%20-%20Scheduled%20Tasks%20%28cron%29/07-verify-cleanup.jpg)
 
 Observation:
 
