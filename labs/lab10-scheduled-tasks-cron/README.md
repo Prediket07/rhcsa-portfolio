@@ -17,6 +17,7 @@ Demonstrate Linux task automation using cron by creating, verifying, modifying, 
 |----------|----------|
 | crontab -l | List scheduled jobs |
 | crontab -e | Create or edit scheduled jobs |
+| which crond | Confirm the cron scheduler is installed |
 | systemctl status crond | Verify cron service |
 | cat | View cron output |
 | tail | View latest log entries |
@@ -44,9 +45,21 @@ Examples:
 
 ---
 
-## Verify Cron Service
+## Verify Existing Jobs and Cron Service
 
-Command:
+Check for existing scheduled jobs:
+
+```bash
+crontab -l
+```
+
+Output:
+
+```text
+no crontab for jross
+```
+
+Confirm the scheduler is installed:
 
 ```bash
 which crond
@@ -58,7 +71,7 @@ Output:
 /usr/sbin/crond
 ```
 
-Verify service:
+Verify the service:
 
 ```bash
 sudo systemctl status crond
@@ -71,33 +84,15 @@ Active: active (running)
 Enabled: enabled
 ```
 
-The scheduler was installed and running.
+![Verify Cron Service and Existing Jobs](01-verify-service-and-jobs.jpg)
 
----
-
-## Verify Existing Jobs
-
-Command:
-
-```bash
-crontab -l
-```
-
-Output:
-
-```text
-no crontab for jross
-```
-
-Observation:
-
-No scheduled jobs existed.
+The scheduler was installed and running, and no scheduled jobs existed yet.
 
 ---
 
 ## Create First Scheduled Task
 
-Edit user crontab:
+Edit user crontab (opens in vim on this system):
 
 ```bash
 crontab -e
@@ -119,7 +114,7 @@ Write current date/time
 Append to log file
 ```
 
-Save and exit.
+Save and exit (`:wq` in vim).
 
 Observation:
 
@@ -140,14 +135,17 @@ cat /tmp/cron-test.log
 Result:
 
 ```text
-Cron Test Sun Sep ...
+Cron Test Sun Sep 27 07:06:01 PM CDT 2026
+Cron Test Sun Sep 27 07:07:01 PM CDT 2026
+Cron Test Sun Sep 27 07:08:01 PM CDT 2026
+Cron Test Sun Sep 27 07:09:01 PM CDT 2026
 ```
 
-Additional entries appeared every minute.
+![Create and Verify Cron Job](02-create-and-verify-cron.jpg)
 
 Observation:
 
-The task executed successfully.
+The task executed successfully, adding a new entry every minute.
 
 ---
 
@@ -183,6 +181,16 @@ New entry:
 */2 * * * * echo "Cron Test $(date)" >> /tmp/cron-test.log
 ```
 
+![Modify Schedule](03-modify-schedule.jpg)
+
+Observation:
+
+Cron saved a backup of the previous crontab automatically:
+
+```text
+Backup of jross's previous crontab saved to /home/jross/.cache/crontab/crontab.bak
+```
+
 ---
 
 ## Verify Updated Schedule
@@ -208,9 +216,11 @@ Observed timestamps:
 07:52
 ```
 
+![Verify Updated Schedule](04-verify-updated-schedule.jpg)
+
 Observation:
 
-The task executed every two minutes.
+The task now executed every two minutes.
 
 ---
 
@@ -224,7 +234,11 @@ crontab -e
 
 Delete the cron entry.
 
-Save and exit.
+![Cron Entry Before Removal](05-remove-cron-entry.jpg)
+
+Save and exit with `:wq`.
+
+![Delete Entry and Save](06-save-and-exit.jpg)
 
 Verify:
 
@@ -235,8 +249,10 @@ crontab -l
 Result:
 
 ```text
-(empty)
+(no output — crontab is empty)
 ```
+
+![Verify Cleanup](07-verify-cleanup.jpg)
 
 Observation:
 
@@ -287,9 +303,10 @@ Every 2 minutes
 - Cron automates recurring tasks.
 - `crond` performs scheduled work.
 - `crontab -e` modifies scheduled jobs.
-- `crontab -l` displays scheduled jobs.
+- `crontab -l` displays scheduled jobs (that's a lowercase L, not the number 1).
 - Cron entries should always be verified.
 - Scheduled tasks can be modified without restarting the service.
+- `crontab -e` saves a backup of the previous crontab.
 - Jobs should be removed when no longer needed.
 
 ---
