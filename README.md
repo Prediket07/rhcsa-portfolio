@@ -23,6 +23,7 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 | Lab 08 | [Storage Decommissioning](labs/lab08-storage-decommissioning/README.md) | Complete |
 | Lab 09 | [Firewalld](labs/lab09-firewalld/README.md) | Complete |
 | Lab 10 | [Scheduled Tasks](labs/lab10-scheduled-tasks-cron/README.md) | Complete |
+| Lab 11 | [Process Management](labs/lab11-process-management/README.md) | Complete |
 
 ## Skills Demonstrated
 
