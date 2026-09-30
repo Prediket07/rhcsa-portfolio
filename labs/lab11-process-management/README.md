@@ -66,7 +66,7 @@ Observation:
 
 Displayed processes associated with the current terminal session: `bash` (PID 5592) and the `ps` command itself (PID 7066).
 
-![ps and ps aux output](01-ps-and-ps-aux.jpg)
+![ps and ps aux output](Lab11%20-%20Process%20Management/01-ps-and-ps-aux.jpg)
 
 ---
 
@@ -82,7 +82,7 @@ Observation:
 
 Displayed running processes on the system regardless of ownership. `head` limited the output to the first 10 lines. PID 1 is `systemd`, the parent of all other processes.
 
-![ps aux output](01-ps-and-ps-aux.jpg)
+![ps aux output](Lab11%20-%20Process%20Management/01-ps-and-ps-aux.jpg)
 
 ---
 
@@ -100,7 +100,7 @@ Displayed parent-child relationships between running processes, with `systemd` a
 
 This helped visualize how services and applications are related. Services such as `chronyd`, `firewalld`, `sshd`, and `crond` all appear as children of `systemd`.
 
-![pstree output](02-pstree.jpg)
+![pstree output](Lab11%20-%20Process%20Management/02-pstree.jpg)
 
 ---
 
@@ -141,7 +141,7 @@ Exit:
 q
 ```
 
-![top output](03-top.jpg)
+![top output](Lab11%20-%20Process%20Management/03-top.jpg)
 
 ---
 
@@ -165,7 +165,7 @@ Linux created a background process and assigned a PID.
 
 The ampersand (`&`) allowed the command to run without occupying the terminal.
 
-![Background process, ps, pgrep, and kill attempt](04-background-process-and-natural-exit.jpg)
+![Background process, ps, pgrep, and kill attempt](Lab11%20-%20Process%20Management/04-background-process-and-natural-exit.jpg)
 
 ---
 
@@ -249,7 +249,7 @@ Important lesson:
 Processes may terminate normally without administrative intervention.
 ```
 
-![Process completed naturally](04-background-process-and-natural-exit.jpg)
+![Process completed naturally](Lab11%20-%20Process%20Management/04-background-process-and-natural-exit.jpg)
 
 ---
 
@@ -329,7 +329,7 @@ bash: syntax error near unexpected token `newline'
 
 `<PID>` is a placeholder, not part of the command. The shell reads `<` as input redirection, so the real PID number must be typed instead (`kill 7600`).
 
-![Kill by PID](05-kill-by-pid.jpg)
+![Kill by PID](Lab11%20-%20Process%20Management/05-kill-by-pid.jpg)
 
 ---
 
@@ -381,7 +381,7 @@ sleep
 
 were terminated.
 
-![killall sleep](06-killall.jpg)
+![killall sleep](Lab11%20-%20Process%20Management/06-killall.jpg)
 
 ---
 
@@ -481,7 +481,7 @@ Results:
 
 Both services have a PPID of 1, meaning `systemd` started them.
 
-![ps -ef for chronyd and firewalld](07-ps-ef-chronyd-firewalld.jpg)
+![ps -ef for chronyd and firewalld](Lab11%20-%20Process%20Management/07-ps-ef-chronyd-firewalld.jpg)
 
 ---
 
@@ -524,7 +524,7 @@ Notes:
 - Port 9090 is owned by `systemd` (PID 1) rather than a named service. This is consistent with socket activation, where systemd listens on the port and starts the service only when a connection arrives. 9090 is the default port for the Cockpit web console.
 - The services listed here (`chronyd`, `sshd`, `cupsd`, `avahi-daemon`) also appear in the `pstree` output, connecting running processes to the network ports they open.
 
-![sudo ss -tulpn output](08-ss-tulpn.jpg)
+![sudo ss -tulpn output](Lab11%20-%20Process%20Management/08-ss-tulpn.jpg)
 
 ---
 
@@ -560,7 +560,7 @@ Notes:
 - The DVD at `/dev/sr0` shows 100% because installation media is read-only and full by design.
 - Exit with `Ctrl+C`.
 
-![watch df -h output](09-watch-df.jpg)
+![watch df -h output](Lab11%20-%20Process%20Management/09-watch-df.jpg)
 
 ---
 
