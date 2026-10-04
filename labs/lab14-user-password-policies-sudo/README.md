@@ -92,7 +92,7 @@ Options shown:
 | -M, --maxdays | Set maximum days before password change |
 | -W, --warndays | Set expiration warning days |
 
-![chage option list](Lab14%20-%20Password%20Policies%20and%20Sudo/01-chage-options.jpg)
+![chage option list](Lab14%20-%20User%20Password%20Policies%20and%20Privileged%20Access/01-chage-options.jpg)
 
 ---
 
@@ -120,7 +120,7 @@ Observation:
 
 The primary account did not have password expiration configured.
 
-![chage -l jross, sudo -l, and new user creation](Lab14%20-%20Password%20Policies%20and%20Sudo/02-user-policy-sudo-new-user.jpg)
+![chage -l jross, sudo -l, and new user creation](Lab14%20-%20User%20Password%20Policies%20and%20Privileged%20Access/02-user-policy-sudo-new-user.jpg)
 
 ---
 
@@ -199,7 +199,7 @@ The new user inherited system defaults. The values (minimum 0, maximum 99999, wa
 
 The last password change reads Oct 03, 2026 even though the VM clock showed the evening of Oct 2. Password dates are stored as whole days since January 1, 1970, which is the likely reason for the one-day difference.
 
-![chage -l lab14user output](Lab14%20-%20Password%20Policies%20and%20Sudo/02-user-policy-sudo-new-user.jpg)
+![chage -l lab14user output](Lab14%20-%20User%20Password%20Policies%20and%20Privileged%20Access/02-user-policy-sudo-new-user.jpg)
 
 ---
 
@@ -228,7 +228,7 @@ Observation:
 
 The password was configured to expire after 30 days. The expiration date (Nov 02, 2026) is the last password change date (Oct 03, 2026) plus 30 days.
 
-![chage -M 30 and the updated expiration date](Lab14%20-%20Password%20Policies%20and%20Sudo/03-chage-max-days.jpg)
+![chage -M 30 and the updated expiration date](Lab14%20-%20User%20Password%20Policies%20and%20Privileged%20Access/03-chage-max-days.jpg)
 
 ---
 
@@ -262,7 +262,7 @@ Linux now requires the user to change the password at the next login.
 
 Setting the last change date to day `0` makes the password count as long expired. The maximum of 30 days from the previous step stayed in place.
 
-![chage -d 0 forcing a password change](Lab14%20-%20Password%20Policies%20and%20Sudo/04-chage-force-change.jpg)
+![chage -d 0 forcing a password change](Lab14%20-%20User%20Password%20Policies%20and%20Privileged%20Access/04-chage-force-change.jpg)
 
 ---
 
@@ -280,9 +280,9 @@ The file is long and mostly made of comments (lines starting with `#`) that docu
 
 Many entries read `Currently ... is not supported`, meaning those settings are not used on this system.
 
-![Start of cat /etc/login.defs](Lab14%20-%20Password%20Policies%20and%20Sudo/05-login-defs-top.jpg)
+![Start of cat /etc/login.defs](Lab14%20-%20User%20Password%20Policies%20and%20Privileged%20Access/05-login-defs-top.jpg)
 
-![Middle of cat /etc/login.defs](Lab14%20-%20Password%20Policies%20and%20Sudo/06-login-defs-middle.jpg)
+![Middle of cat /etc/login.defs](Lab14%20-%20User%20Password%20Policies%20and%20Privileged%20Access/06-login-defs-middle.jpg)
 
 ---
 
@@ -317,7 +317,7 @@ These values determine default password settings applied to newly created users.
 
 The first four lines of output start with `#`. They are comments that describe each setting. `#PASS_MAX_LEN 8` is also commented out, so it is not active.
 
-![grep PASS /etc/login.defs output](Lab14%20-%20Password%20Policies%20and%20Sudo/07-login-defs-grep-pass.jpg)
+![grep PASS /etc/login.defs output](Lab14%20-%20User%20Password%20Policies%20and%20Privileged%20Access/07-login-defs-grep-pass.jpg)
 
 ---
 
@@ -378,7 +378,7 @@ Observation:
 
 Opened the sudoers configuration safely.
 
-![sudo visudo typed at the prompt](Lab14%20-%20Password%20Policies%20and%20Sudo/08-visudo-command.jpg)
+![sudo visudo typed at the prompt](Lab14%20-%20User%20Password%20Policies%20and%20Privileged%20Access/08-visudo-command.jpg)
 
 The editor that opened is `vi` (note the `1,1 Top` position indicator at the bottom right). The status line shows the file as `/etc/sudoers.tmp`, a temporary copy. `visudo` edits the copy and checks it before replacing the real `/etc/sudoers` file.
 
@@ -386,7 +386,7 @@ The header comment in the file reads: `This file must be edited with the 'visudo
 
 The file also contains commented examples of Host_Alias, User_Alias, and Cmnd_Alias entries (NETWORKING, SOFTWARE, SERVICES, LOCATE, STORAGE).
 
-![visudo editor showing /etc/sudoers.tmp](Lab14%20-%20Password%20Policies%20and%20Sudo/09-visudo-editor.jpg)
+![visudo editor showing /etc/sudoers.tmp](Lab14%20-%20User%20Password%20Policies%20and%20Privileged%20Access/09-visudo-editor.jpg)
 
 Important note:
 
