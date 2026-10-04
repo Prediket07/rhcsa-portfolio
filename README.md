@@ -26,6 +26,7 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 | Lab 11 | [Process Management](labs/lab11-process-management/README.md) | Complete |
 | Lab 12 | [Log Management](labs/lab12-log-management/README.md) | Complete |
 | Lab 13 | [Archiving Compression](labs/lab13-archiving-compression/README.md) | Complete |
+| Lab 14 | [User Password Policies & Privileged Access](labs/lab14-user-password-policies-sudo/README.md) | Complete |
 
 ## Skills Demonstrated
 
