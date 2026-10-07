@@ -28,6 +28,7 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 | Lab 13 | [Archiving Compression](labs/lab13-archiving-compression/README.md) | Complete |
 | Lab 14 | [User Password Policies & Privileged Access](labs/lab14-user-password-policies-sudo/README.md) | Complete |
 | Lab 15 | [SELinux](labs/lab15-selinux/README.md) | Complete |
+| Lab 16 | [SSH](labs/lab16-ssh/README.md) | Complete |
 
 ## Skills Demonstrated
 
