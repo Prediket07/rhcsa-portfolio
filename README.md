@@ -30,7 +30,7 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 | Lab 15 | [SELinux](labs/lab15-selinux/README.md) | Complete |
 | Lab 16 | [SSH](labs/lab16-ssh/README.md) | Complete |
 | Lab 17 | [Shell Scripting](labs/lab17-shell-scripting/README.md) | Complete |
-
+| Lab 18 | [Boot Process and Recovery](labs/lab18-boot-process-recovery/README.md) | Complete |
 
 ## Skills Demonstrated
 
