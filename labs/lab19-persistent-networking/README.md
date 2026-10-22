@@ -10,7 +10,7 @@ Demonstrate how to view, modify, and apply persistent network configuration usin
 - Hostname: rhcsa-lab.local
 - Primary User: jross
 - Hypervisor: VMware Workstation
-- Screenshots: [Lab19 - Persistant Networking](Lab19%20-%20Persistant%20Networking/)
+- Screenshots: [Lab19 - Persistent Networking](Lab19%20-%20Persistent%20Networking/)
 
 ## Concepts Covered
 
@@ -68,7 +68,7 @@ Command:
 nmcli device status
 ```
 
-![Network Devices and Saved Connections](Lab19%20-%20Persistant%20Networking/01-network-devices-and-connections.jpg)
+![Network Devices and Saved Connections](Lab19%20-%20Persistent%20Networking/01-network-devices-and-connections.jpg)
 
 Observation:
 
@@ -112,7 +112,7 @@ To see every setting stored in one profile:
 nmcli connection show ens160
 ```
 
-![ens160 Connection Profile Details](Lab19%20-%20Persistant%20Networking/02-connection-profile-details.jpg)
+![ens160 Connection Profile Details](Lab19%20-%20Persistent%20Networking/02-connection-profile-details.jpg)
 
 Observation:
 
@@ -134,7 +134,7 @@ Output:
 inet 192.168.243.128/24 ... dynamic ... ens160
 ```
 
-![Current IP Address](Lab19%20-%20Persistant%20Networking/03-current-ip-address.jpg)
+![Current IP Address](Lab19%20-%20Persistent%20Networking/03-current-ip-address.jpg)
 
 Observation:
 
@@ -156,7 +156,7 @@ Output:
 ipv4.method:    auto
 ```
 
-![Address Method and Routing](Lab19%20-%20Persistant%20Networking/04-address-method-and-routing.jpg)
+![Address Method and Routing](Lab19%20-%20Persistent%20Networking/04-address-method-and-routing.jpg)
 
 Observation:
 
@@ -195,7 +195,7 @@ Command:
 nmcli connection show ens160 | grep dns
 ```
 
-![DNS Configuration](Lab19%20-%20Persistant%20Networking/05-dns-configuration.jpg)
+![DNS Configuration](Lab19%20-%20Persistent%20Networking/05-dns-configuration.jpg)
 
 Observation:
 
@@ -211,7 +211,7 @@ Command:
 nmcli connection show ens160 | grep ipv4
 ```
 
-![IPv4 Settings](Lab19%20-%20Persistant%20Networking/06-ipv4-settings.jpg)
+![IPv4 Settings](Lab19%20-%20Persistent%20Networking/06-ipv4-settings.jpg)
 
 Observation:
 
@@ -229,7 +229,7 @@ Command:
 nmcli connection modify ens160 ipv4.addresses 192.168.243.150/24
 ```
 
-![Configure Static IP Address](Lab19%20-%20Persistant%20Networking/07-configure-static-ip.jpg)
+![Configure Static IP Address](Lab19%20-%20Persistent%20Networking/07-configure-static-ip.jpg)
 
 Purpose:
 
@@ -290,7 +290,7 @@ ipv4.addresses:   192.168.243.150/24
 ipv4.gateway:     192.168.243.2
 ```
 
-![Verify Saved Configuration](Lab19%20-%20Persistant%20Networking/08-verify-saved-configuration.jpg)
+![Verify Saved Configuration](Lab19%20-%20Persistent%20Networking/08-verify-saved-configuration.jpg)
 
 Observation:
 
@@ -312,7 +312,7 @@ Enable the connection:
 sudo nmcli connection up ens160
 ```
 
-![Apply Configuration Changes](Lab19%20-%20Persistant%20Networking/09-apply-configuration-changes.jpg)
+![Apply Configuration Changes](Lab19%20-%20Persistent%20Networking/09-apply-configuration-changes.jpg)
 
 Observation:
 
@@ -334,7 +334,7 @@ Output:
 inet 192.168.243.150/24 ... ens160
 ```
 
-![Verify IP Address, Routing, and Connectivity](Lab19%20-%20Persistant%20Networking/10-verify-ip-routing-connectivity.jpg)
+![Verify IP Address, Routing, and Connectivity](Lab19%20-%20Persistent%20Networking/10-verify-ip-routing-connectivity.jpg)
 
 Observation:
 
@@ -419,7 +419,7 @@ Successful DNS resolution and network communication were verified.
 
 ## Screenshots
 
-All screenshots for this lab: [Lab19 - Persistant Networking](Lab19%20-%20Persistant%20Networking/)
+All screenshots for this lab: [Lab19 - Persistent Networking](Lab19%20-%20Persistent%20Networking/)
 
 | # | File | Shows |
 |---|------|-------|
