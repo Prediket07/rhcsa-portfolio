@@ -31,6 +31,7 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 | Lab 16 | [SSH](labs/lab16-ssh/README.md) | Complete |
 | Lab 17 | [Shell Scripting](labs/lab17-shell-scripting/README.md) | Complete |
 | Lab 18 | [Boot Process and Recovery](labs/lab18-boot-process-recovery/README.md) | Complete |
+| Lab 19 | [Persistent Networking](labs/lab19-persistent-networking/README.md) | Complete |
 
 ## Skills Demonstrated
 
