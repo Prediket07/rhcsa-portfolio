@@ -33,6 +33,7 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 | Lab 18 | [Boot Process and Recovery](labs/lab18-boot-process-recovery/README.md) | Complete |
 | Lab 19 | [Persistent Networking](labs/lab19-persistent-networking/README.md) | Complete |
 | Lab 20 | [Software Management](labs/lab20-software-management/README.md) | Complete |
+| Lab 21 | [Links Swap and LVM](labs/lab21-links-swap-lvm/README.md) | Complete |
 
 ## Skills Demonstrated
 
