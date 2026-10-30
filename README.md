@@ -36,6 +36,7 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 | Lab 21 | [Links Swap and LVM](labs/lab21-links-swap-lvm/README.md) | Complete |
 | Lab 22 | [Time Synchronization](labs/lab22-time-synchronization/README.md) | Complete |
 | Lab 23 | [NFS](labs/lab23-nfs/README.md) | Complete |
+| Lab 24 | [Firewalld Zones](labs/lab24-firewalld-zones/README.md) | Complete |
 
 ## Skills Demonstrated
 
