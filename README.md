@@ -38,6 +38,7 @@ Hands-on Rocky Linux administration labs completed while preparing for the Red H
 | Lab 23 | [NFS](labs/lab23-nfs/README.md) | Complete |
 | Lab 24 | [Firewalld Zones](labs/lab24-firewalld-zones/README.md) | Complete |
 | Lab 25 | [Autofs](labs/lab25-autofs/README.md) | Complete |
+| Lab 26 | [TuneD Profiles](labs/lab26-tuned-profiles/README.md) | Complete |
 
 ## Skills Demonstrated
 
